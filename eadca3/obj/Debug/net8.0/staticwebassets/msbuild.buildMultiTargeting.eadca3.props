@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/eadca3.props" />
+</Project>

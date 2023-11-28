@@ -1,0 +1,20 @@
+<!-- Email component-->
+
+<input type="email" @bind="userEmail" placeholder="Enter email" />
+<button @onclick="SendEmail">Send</button>
+
+@code {
+    private string userEmail;
+
+    private void SendEmail()
+    {
+        if (!string.IsNullOrWhiteSpace(userEmail))
+        {
+            string subject = "Subject of the email";
+            string body = "Body of the email";
+
+            string mailtoLink = $"mailto:{userEmail}?subject={subject}&body={body}";
+            NavigationManager.NavigateTo(mailtoLink, forceLoad: true);
+        }
+    }
+}

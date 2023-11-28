@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/obj/Debug/net8.0/scopedcss/projectbundle/eadca3.bundle.scp.css",
+      "PackagePath": "staticwebassets/eadca3.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.eadca3.props",
+      "PackagePath": "build\\eadca3.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.eadca3.props",
+      "PackagePath": "buildMultiTargeting\\eadca3.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.eadca3.props",
+      "PackagePath": "buildTransitive\\eadca3.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.eadca3.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
