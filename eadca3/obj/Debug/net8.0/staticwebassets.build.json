@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zOJQbQ3uLjAsbSaTi9l1NHicmc4nZ2nGWObdz1YNoRk=",
+  "Hash": "R/AnJ6cuQJQ1xphbfGp1lO9bUNyPPFPnB3m8EYYfTSw=",
   "Source": "eadca3",
   "BasePath": "_content/eadca3",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "eadca3/wwwroot",
       "Source": "eadca3",
-      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/wwwroot/",
+      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/",
       "BasePath": "_content/eadca3",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/obj/Debug/net8.0/scopedcss/bundle/eadca3.styles.css",
+      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/obj/Debug/net8.0/scopedcss/bundle/eadca3.styles.css",
       "SourceId": "eadca3",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/obj/Debug/net8.0/scopedcss/bundle/",
+      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/eadca3",
       "RelativePath": "eadca3.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/obj/Debug/net8.0/scopedcss/bundle/eadca3.styles.css"
+      "OriginalItemSpec": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/obj/Debug/net8.0/scopedcss/bundle/eadca3.styles.css"
     },
     {
-      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/obj/Debug/net8.0/scopedcss/projectbundle/eadca3.bundle.scp.css",
+      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/obj/Debug/net8.0/scopedcss/projectbundle/eadca3.bundle.scp.css",
       "SourceId": "eadca3",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/obj/Debug/net8.0/scopedcss/projectbundle/",
+      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/eadca3",
       "RelativePath": "eadca3.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/obj/Debug/net8.0/scopedcss/projectbundle/eadca3.bundle.scp.css"
+      "OriginalItemSpec": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/obj/Debug/net8.0/scopedcss/projectbundle/eadca3.bundle.scp.css"
     },
     {
-      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/wwwroot/app.css",
+      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/app.css",
       "SourceId": "eadca3",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/wwwroot/",
+      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/",
       "BasePath": "_content/eadca3",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/wwwroot/bootstrap/bootstrap.min.css",
+      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/bootstrap/bootstrap.min.css",
       "SourceId": "eadca3",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/wwwroot/",
+      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/",
       "BasePath": "_content/eadca3",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/wwwroot/bootstrap/bootstrap.min.css.map",
+      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/bootstrap/bootstrap.min.css.map",
       "SourceId": "eadca3",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/wwwroot/",
+      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/",
       "BasePath": "_content/eadca3",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/wwwroot/favicon.png",
+      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/favicon.png",
       "SourceId": "eadca3",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/CA3/eadca3/wwwroot/",
+      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/",
       "BasePath": "_content/eadca3",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
