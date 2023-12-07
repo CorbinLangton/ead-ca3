@@ -38,6 +38,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[*, )"
+            },
+            "Remote.Linq.Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[*, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

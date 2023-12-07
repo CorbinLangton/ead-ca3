@@ -1,3 +1,4 @@
+using Blazored.LocalStorage;
 using eadca3.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,3 +26,6 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
+
+builder.Services.AddHttpClient();
+builder.Services.AddBlazoredLocalStorage();

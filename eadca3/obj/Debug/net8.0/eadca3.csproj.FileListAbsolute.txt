@@ -57,3 +57,10 @@
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/obj/Debug/net8.0/scopedcss/projectbundle/eadca3.bundle.scp.css
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/obj/Debug/net8.0/eadca3.genruntimeconfig.cache
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/obj/Debug/net8.0/ref/eadca3.dll
+/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/obj/Debug/net8.0/eadca3.csproj.AssemblyReference.cache
+/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/bin/Debug/net8.0/Aqua.dll
+/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/bin/Debug/net8.0/Aqua.Newtonsoft.Json.dll
+/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/bin/Debug/net8.0/Remote.Linq.dll
+/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/bin/Debug/net8.0/Remote.Linq.Newtonsoft.Json.dll
+/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/obj/Debug/net8.0/eadca3.csproj.CopyComplete

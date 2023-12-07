@@ -11,9 +11,9 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("eadca3")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1a517dc138ca749774b7ca01a4a5b5c51dcaeb5")]
 [assembly: System.Reflection.AssemblyProductAttribute("eadca3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("eadca3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
