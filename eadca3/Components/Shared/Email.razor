@@ -8,7 +8,7 @@
 
 <h1>Contact Us</h1>
 
-<form @onsubmit="sendMessage">
+<form @onsubmit="send">
     <label>Email Address:</label>
     <input type="email" @bind="userEmail" />
     <br />
@@ -26,12 +26,12 @@
 
 @code {
 
-    private EmailServiceNamespace.EmailService emailService = new EmailServiceNamespace.EmailService();
+    private EmailService emailService = new EmailService();
     private string userEmail;
     private string emailSubject;
     private string emailBody;
 
-    private async Task sendMessage() {
+    private async Task send() {
         await emailService.SendMessage(userEmail, emailSubject, emailBody);
         userEmail = "";
         emailSubject = "";

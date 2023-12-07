@@ -1,11 +1,44 @@
 ﻿@page "/"
+@inject HttpClient client
 
-<PageTitle>Welcome</PageTitle>
+<PageTitle>Home Page</PageTitle>
 
-<h1>Welcome</h1>
+    <button @onclick="GenerateQuote">Generate</button>
 
-<div>
-    <p>System date: @DateTime.Now.ToShortDateString()</p>
-    <p>System Time: @DateTime.Now.ToShortTimeString()</p>
-    <p>System Time Zone: @TimeZoneInfo.Local.DisplayName</p>
-</div>
+    @if (!string.IsNullOrEmpty(quote))
+    {
+        <div class="main-page">
+            @quote
+        </div>
+    }
+
+@code {
+
+    private string quote;
+
+    private async Task GenerateQuote() {
+        try {
+            var res = await client.GetAsync("https://api.chucknorris.io/jokes/random");
+
+            if(res.IsSuccessStatusCode) {
+                var json = await res.Content.ReadAsStringAsync();
+
+                var resObj = System.Text.Json.JsonSerializer.Deserialize<JokeResponse>(json);
+
+                if (!string.IsNullOrEmpty(resObj.Value)) {
+                    quote = resObj.Value;
+                } else {
+                    quote = "Error";
+                }
+            }   else {
+                quote = "Failed to retrieve quote.";                
+            }
+        } catch (Exception e){
+            quote = "Error: " + e.Message;
+        }
+    }
+
+    public class JokeResponse {
+        public string Value {get; set;}
+    }
+}
