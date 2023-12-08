@@ -7,6 +7,6 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="*"/>
     <PackageReference Include="Remote.Linq.Newtonsoft.Json" Version="*"/>
-    <PackageReference Include="Blazored.LocalStorage" Version="4.4.0" />
+<!--    <PackageReference Include="Blazored.LocalStorage" Version="4.4.0" /> -->
   </ItemGroup>
 </Project>

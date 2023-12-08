@@ -1,20 +1,17 @@
 ﻿@page "/"
-@inject Blazored.LocalStorage.ILocalStorageService localStorage
 
 
 <PageTitle>Home Page</PageTitle>
 
     <h1>Joke Central</h1>
-
-    <p>@quote</p>
+    <h1>@Joke.value</h1>
 
     <button @onclick="GenerateJoke">Generate</button>
 
-    @if (!string.IsNullOrEmpty(quote))
+    @if (!string.IsNullOrEmpty(@Joke.value))
     {
         <div class="main-page">
-            Here
-            @quote
+            @Joke.value;
         </div>
     }
 
@@ -26,19 +23,25 @@
     @using Newtonsoft.Json.Linq
     @using Newtonsoft.Json
 
-    public JokeJson Joke = new();
-    private string quote;
+    public JokeJson Joke = new JokeJson();
 
     public async Task GenerateJoke() {
+
+        Console.WriteLine("Button clicked!");
+
         using HttpClient client = new HttpClient();
         var res = await client.GetStringAsync("https://api.chucknorris.io/jokes/random");
-        var joke = JsonConvert.DeserializeObject<JokeJson>(res);
-        quote = joke.value;
+        Joke = JsonConvert.DeserializeObject<JokeJson>(res);
+        Console.WriteLine(Joke.value);
         StateHasChanged();
     }
 
+    private void changeVal() {
+        Console.WriteLine("Here");
+    }
+
     public class JokeJson {
-        public List<object> categories { get; set; }
+        public List<string> categories { get; set; }
         public string created_at { get; set; }
         public string icon_url { get; set; }
         public string id { get; set; }
