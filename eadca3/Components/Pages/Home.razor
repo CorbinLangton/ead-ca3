@@ -1,17 +1,12 @@
 ﻿@page "/"
+@rendermode InteractiveServer
 
-
-<PageTitle>Home Page</PageTitle>
-
-    <h1>Joke Central</h1>
-    <h1>@Joke.value</h1>
-
-    <button @onclick="GenerateJoke">Generate</button>
+<PageTitle>Home Pagee</PageTitle>
 
     @if (!string.IsNullOrEmpty(@Joke.value))
     {
         <div class="main-page">
-            @Joke.value;
+            @Joke.value
         </div>
     }
 
@@ -25,6 +20,20 @@
 
     public JokeJson Joke = new JokeJson();
 
+    public void GenerateJokeeee() {
+        try {
+            Console.WriteLine("Here");
+        } catch (Exception e) {
+            Console.WriteLine(e.Message);
+        }
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        GenerateJoke();
+        return base.OnInitializedAsync();
+    }
+
     public async Task GenerateJoke() {
 
         Console.WriteLine("Button clicked!");
@@ -32,12 +41,8 @@
         using HttpClient client = new HttpClient();
         var res = await client.GetStringAsync("https://api.chucknorris.io/jokes/random");
         Joke = JsonConvert.DeserializeObject<JokeJson>(res);
-        Console.WriteLine(Joke.value);
+        Console.WriteLine(Joke.value + "Here");
         StateHasChanged();
-    }
-
-    private void changeVal() {
-        Console.WriteLine("Here");
     }
 
     public class JokeJson {

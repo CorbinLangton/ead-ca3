@@ -9,6 +9,8 @@ builder.Services.AddRazorComponents()
 
 var app = builder.Build();
 
+// builder.Services.AddBlazoredLocalStorage();
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -28,4 +30,3 @@ app.MapRazorComponents<App>()
 app.Run();
 
 builder.Services.AddHttpClient();
-// builder.Services.AddBlazoredLocalStorage();
