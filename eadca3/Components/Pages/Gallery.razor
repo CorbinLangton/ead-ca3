@@ -1,0 +1,79 @@
+@page "/gallery"
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+@using System.IO;
+@using System.Text.Json;
+@using Microsoft.AspNetCore.Hosting;
+
+<script>
+    window.displayImages = (imageUrlsJson, index) {
+        const ImageUrls = JSON.parse(imageUrlsJson);
+        const slides = document.querySelector('.slides');
+        slides.innerHTML = '';
+
+        for (let i = index; i < (index + 5); i++) {
+            if (i < ImageUrls.length) {
+                const img = document.createElement('img');
+                img.src = ImageUrls[i];
+                slides.appendChild(img)
+            }
+        }
+    }
+</script>
+
+<PageTitle>Gallery</PageTitle>
+
+<div class="gallery">
+    <div class="col-3">
+        <button @onclick="Previous"> &lt;== </button>
+    </div>
+    <div class="slides col-6 d-flex">
+        @for (int i = index; i < Math.Min(index + 5, ImageUrls.Count); i++) {
+            <img src=@ImageUrls[i]>
+        }
+    </div>
+    <div class="col-3">
+        <button @onclick="Next"> ==&gt; </button>
+    </div>
+</div>
+
+@code {
+    private List<string> ImageUrls = new List<string>();
+    private int index { get; set; }= 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        GetImageUrls();
+    }
+
+
+
+    public void GetImageUrls() {
+        var DirectoryUrl = "Images/GalleryImages";
+        string[] GalleryImages = Directory.GetFiles($"{wwwRootPath}/{DirectoryUrl}", "*.jpeg");
+        foreach (string image in GalleryImages) {
+            ImageUrls.Add($"{DirectoryUrl}/{Path.GetFileName(image)}");
+        }
+        StateHasChanged();
+    }
+
+    private async Task Previous() {
+        if (index > 0 && index >= 5) {
+            index -= 5;
+            await JSRuntime.InvokeVoidAsync("displayImages", JsonSerializer.Serialize(ImageUrls), index);
+        } else if (index < 5) {
+            index -= index;
+            await JSRuntime.InvokeVoidAsync("displayImages", JsonSerializer.Serialize(ImageUrls), index);
+        }
+    }
+    private async Task Next() {
+        if (index < ImageUrls.Count - 5) {
+            index += 5;
+            await JSRuntime.InvokeVoidAsync("displayImages", JsonSerializer.Serialize(ImageUrls), index);
+        }
+    }
+
+    [Inject]
+    private IWebHostEnvironment Env { get; set; }
+    private string wwwRootPath => Env.WebRootPath;
+}
