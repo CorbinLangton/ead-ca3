@@ -64,3 +64,4 @@
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/bin/Debug/net8.0/Remote.Linq.dll
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/bin/Debug/net8.0/Remote.Linq.Newtonsoft.Json.dll
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/obj/Debug/net8.0/eadca3.csproj.CopyComplete
+/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/bin/Debug/net8.0/Blazored.LocalStorage.dll

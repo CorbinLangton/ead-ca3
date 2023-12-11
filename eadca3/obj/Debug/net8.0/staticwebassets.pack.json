@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets/favicon.png"
     },
     {
+      "Id": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/scripts/autoFocus.js",
+      "PackagePath": "staticwebassets/scripts/autoFocus.js"
+    },
+    {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.eadca3.props",
       "PackagePath": "build\\eadca3.props"
     },

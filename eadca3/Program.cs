@@ -1,4 +1,4 @@
-// using Blazored.LocalStorage;
+using Blazored.LocalStorage;
 using eadca3.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,9 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-var app = builder.Build();
+builder.Services.AddBlazoredLocalStorage();
 
-// builder.Services.AddBlazoredLocalStorage();
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

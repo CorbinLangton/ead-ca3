@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "R/AnJ6cuQJQ1xphbfGp1lO9bUNyPPFPnB3m8EYYfTSw=",
+  "Hash": "EdgRTTY5bOBaIjHin+CC8PAc1DOwktNcYyo4cDSPIfk=",
   "Source": "eadca3",
   "BasePath": "_content/eadca3",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.png"
+    },
+    {
+      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/scripts/autoFocus.js",
+      "SourceId": "eadca3",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/",
+      "BasePath": "_content/eadca3",
+      "RelativePath": "scripts/autoFocus.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/scripts/autoFocus.js"
     }
   ]
 }

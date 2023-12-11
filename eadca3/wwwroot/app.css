@@ -50,6 +50,10 @@ h1:focus {
     border-color: #929292;
 }
 
-.main-page {
+.joke-container {
     background-image:url(../Components/Images/Chuck-Norris.png);
+}
+
+select {
+    max-width: 150px;
 }
