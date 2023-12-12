@@ -6,47 +6,61 @@
 @using Microsoft.AspNetCore.Hosting;
 
 <script>
-    window.displayImages = (imageUrlsJson, index) {
+    window.displayImages = function(imageUrlsJson, index) {
         const ImageUrls = JSON.parse(imageUrlsJson);
         const slides = document.querySelector('.slides');
         slides.innerHTML = '';
-
+        const enclosingDiv = document.createElement('div');
+        enclosingDiv.classList.add('col-12')
         for (let i = index; i < (index + 5); i++) {
             if (i < ImageUrls.length) {
                 const img = document.createElement('img');
+                img.classList.add('m-2', 'gap-2', 'h-100', 'w-200')
                 img.src = ImageUrls[i];
-                slides.appendChild(img)
+                enclosingDiv.appendChild(img)
             }
         }
+        slides.appendChild(enclosingDiv)
     }
 </script>
 
 <PageTitle>Gallery</PageTitle>
 
-<div class="gallery">
-    <div class="col-3">
-        <button @onclick="Previous"> &lt;== </button>
-    </div>
-    <div class="slides col-6 d-flex">
-        @for (int i = index; i < Math.Min(index + 5, ImageUrls.Count); i++) {
-            <img src=@ImageUrls[i]>
-        }
-    </div>
-    <div class="col-3">
-        <button @onclick="Next"> ==&gt; </button>
-    </div>
+<div class="gallery container mt-4">
+        <div class="row align-items-center">
+            <div class="col-1">
+                <button @onclick="Previous">
+                    <img src="images/arrow-left.png" height="50px">
+                </button>
+            </div>
+            <div class="slides col-10">
+                <div class="row">
+                    @for (int i = index; i < Math.Min(index + 5, ImageUrls.Count); i++) {
+                        <div class="col-2 m-2 gap-2">
+                            <div class="card">
+                                <img src=@ImageUrls[i] class="card-img-top" height="500px" width="200px">
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-1">
+                <button @onclick="Next">
+                    <img src="images/arrow-right.png" height="50px">
+                </button>
+            </div>
+        </div>
 </div>
 
 @code {
     private List<string> ImageUrls = new List<string>();
-    private int index { get; set; }= 0;
+    private int index { get; set; } = 0;
 
     protected override async Task OnInitializedAsync()
     {
         GetImageUrls();
+        index = 0;
     }
-
-
 
     public void GetImageUrls() {
         var DirectoryUrl = "Images/GalleryImages";

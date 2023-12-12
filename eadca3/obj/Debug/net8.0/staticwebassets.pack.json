@@ -49,6 +49,14 @@
       "PackagePath": "staticwebassets/Images/GalleryImages/image9.jpeg"
     },
     {
+      "Id": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/Images/arrow-left.png",
+      "PackagePath": "staticwebassets/Images/arrow-left.png"
+    },
+    {
+      "Id": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/Images/arrow-right.png",
+      "PackagePath": "staticwebassets/Images/arrow-right.png"
+    },
+    {
       "Id": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/wwwroot/app.css",
       "PackagePath": "staticwebassets/app.css"
     },

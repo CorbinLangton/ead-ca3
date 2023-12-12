@@ -1,57 +1,17 @@
 ﻿@page "/"
 @rendermode InteractiveServer
 
-<PageTitle>Home Pagee</PageTitle>
+<PageTitle>Home Page</PageTitle>
 
-    @if (!string.IsNullOrEmpty(@Joke.value))
-    {
-        <div class="main-page">
-            @Joke.value
-        </div>
-    }
+<div class="container d-flex">
+    <div class="row align-content-center col">
+        <button class="btn btn-primary" href="/joke">
+            Jokes
+        </button>
+        <button class="btn btn-primary" href="/gallery">
+            Gallery
+        </button>
+    </div>
+</div>
 
-@code {
-    @using System.Net.Http
-    @using System.Text
-    @using System.Net.Http.Json
-    @using System.Web
-    @using Newtonsoft.Json.Linq
-    @using Newtonsoft.Json
-
-    public JokeJson Joke = new JokeJson();
-
-    public void GenerateJokeeee() {
-        try {
-            Console.WriteLine("Here");
-        } catch (Exception e) {
-            Console.WriteLine(e.Message);
-        }
-    }
-
-    protected override Task OnInitializedAsync()
-    {
-        GenerateJoke();
-        return base.OnInitializedAsync();
-    }
-
-    public async Task GenerateJoke() {
-
-        Console.WriteLine("Button clicked!");
-
-        using HttpClient client = new HttpClient();
-        var res = await client.GetStringAsync("https://api.chucknorris.io/jokes/random");
-        Joke = JsonConvert.DeserializeObject<JokeJson>(res);
-        Console.WriteLine(Joke.value + "Here");
-        StateHasChanged();
-    }
-
-    public class JokeJson {
-        public List<string> categories { get; set; }
-        public string created_at { get; set; }
-        public string icon_url { get; set; }
-        public string id { get; set; }
-        public string updated_at { get; set; }
-        public string url { get; set; }
-        public string value { get; set; }
-    }
-}
+@code {}
