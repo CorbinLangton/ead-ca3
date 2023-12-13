@@ -1,0 +1,121 @@
+﻿@page "/joke"
+@inject IJSRuntime JSRuntime
+
+<div class="joke-container">
+    <div class="joke-text">
+        <p>@CurrentJoke</p>
+    </div>
+    <div class="controls-container">
+        <button type="button" @onclick='@GenerateJoke'>Generate</button>
+
+        <label for="joke-category">Joke Category:</label>
+        <select name="joke-category" id="joke-category" @ref="JokeCategoryRef" @onchange="getCategory">
+            <option value="any">any</option>
+            <option value="animal">animal</option>
+            <option value="career">career</option>
+            <option value="celebrity">celebrity</option>
+            <option value="dev">dev</option>
+            <option value="explicit">Explicit</option>
+            <option value="fashion">Fashion</option>
+            <option value="food">Food</option>
+            <option value="history">History</option>
+            <option value="money">Money</option>
+            <option value="movie">Movie</option>
+            <option value="music">Music</option>
+            <option value="political">Political</option>
+            <option value="religion">Religion</option>
+            <option value="science">Science</option>
+            <option value="sport">Sport</option>
+            <option value="travel">Travel</option>
+        </select>
+
+        <select name="joke-history" id="joke-history" @onchange="UpdateJoke">
+            <option value="" disabled selected hidden>Joke History</option>
+            @foreach (var joke in JokeHistory)
+            {
+                <option value="@joke">@joke</option>
+            }
+        </select>
+    </div>
+</div>
+
+@code {
+    @using System.Net.Http
+    @using System.Text
+    @using System.Net.Http.Json
+    @using System.Web
+    @using Newtonsoft.Json.Linq
+    @using Newtonsoft.Json
+
+    private string? CurrentJoke { get; set; }
+    private ElementReference JokeCategoryRef { get; set; }
+    private string? JokeCategory { get; set; } = "any";
+
+    private List<string> JokeHistory = new List<string>();
+
+    private async Task getCategory(ChangeEventArgs e)
+    {
+        JokeCategory = e.Value.ToString();
+    }
+
+    public async Task UpdateJoke(ChangeEventArgs e)
+    {
+        CurrentJoke = e.Value.ToString();
+        StateHasChanged();
+    }
+
+    public JokeJson JokeObject = new JokeJson();
+
+    public async Task GenerateJoke()
+    {
+        if (JokeCategory == "any")
+        {
+            try
+            {
+                using HttpClient client = new HttpClient();
+                var res = await client.GetStringAsync("https://api.chucknorris.io/jokes/random");
+                JokeObject = JsonConvert.DeserializeObject<JokeJson>(res);
+                CurrentJoke = JokeObject.value;
+                if (!JokeHistory.Contains(CurrentJoke))
+                {
+                    JokeHistory.Add(CurrentJoke);
+                }
+                StateHasChanged();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+        else
+        {
+            try
+            {
+                using HttpClient client = new HttpClient();
+                var res = await client.GetStringAsync($"https://api.chucknorris.io/jokes/random?category={JokeCategory}");
+                JokeObject = JsonConvert.DeserializeObject<JokeJson>(res);
+                CurrentJoke = JokeObject.value;
+                if (!JokeHistory.Contains(CurrentJoke))
+                {
+                    JokeHistory.Add(CurrentJoke);
+                }
+                StateHasChanged();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+    }
+
+    public class JokeJson
+    {
+        public List<string>? categories { get; set; }
+        public string? created_at { get; set; }
+        public string? icon_url { get; set; }
+        public string? id { get; set; }
+        public string? updated_at { get; set; }
+        public string? url { get; set; }
+        public string? value { get; set; }
+    }
+}

@@ -1,0 +1,83 @@
+﻿@page "/gallery"
+@inject IJSRuntime JSRuntime
+@using System.IO;
+@using System.Text.Json;
+
+<div class="gallery container mt-4">
+    <div class="row align-items-center">
+        <div class="col-1">
+            <button @onclick="Previous">
+                <img src="images/arrow-left.png" height="50px">
+            </button>
+        </div>
+        <div class="slides col-10">
+            <div class="row">
+                @for (int i = @index; i < Math.Min(@index + 5, ImageUrls.Count); i++)
+                {
+                    <div class="col-2 m-2 gap-2">
+                        <div class="card">
+                            <img src=@ImageUrls[i] class="card-img-top" height="500px" width="200px">
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="col-1">
+            <button @onclick="Next">
+                <img src="images/arrow-right.png" height="50px">
+            </button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<string> ImageUrls = new List<string>();
+    private int index { get; set; } = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        GetImageUrls();
+        index = 0;
+    }
+
+    // Why does this not change
+
+    public void GetImageUrls()
+    {
+        // var DirectoryUrl = $"Images/GalleryImages";
+        int totalImages = 11;
+
+        for (int i = 1; i < totalImages; i++)
+        {
+            string imageUrl = $"images/GalleryImages/image{i}.jpeg";
+            ImageUrls.Add(imageUrl);
+        }
+        // string[] GalleryImages = Directory.GetFiles($"{DirectoryUrl}", "*.jpeg");
+        // foreach (string image in GalleryImages) {
+        //    ImageUrls.Add($"{DirectoryUrl}/{Path.GetFileName(image)}");
+        // }
+        StateHasChanged();
+    }
+
+    private async Task Previous()
+    {
+        if (index > 0 && index >= 5)
+        {
+            index -= 5;
+            await JSRuntime.InvokeVoidAsync("displayImages", JsonSerializer.Serialize(ImageUrls), index);
+        }
+        else if (index < 5)
+        {
+            index -= index;
+            await JSRuntime.InvokeVoidAsync("displayImages", JsonSerializer.Serialize(ImageUrls), index);
+        }
+    }
+    private async Task Next()
+    {
+        if (index < ImageUrls.Count - 5)
+        {
+            index += 5;
+            await JSRuntime.InvokeVoidAsync("displayImages", JsonSerializer.Serialize(ImageUrls), index);
+        }
+    }
+}
