@@ -60,12 +60,20 @@
         index = 0;
     }
 
+// Why does this not change
+
     public void GetImageUrls() {
-        var DirectoryUrl = "Images/GalleryImages";
-        string[] GalleryImages = Directory.GetFiles($"{DirectoryUrl}", "*.jpeg");
-        foreach (string image in GalleryImages) {
-            ImageUrls.Add($"{DirectoryUrl}/{Path.GetFileName(image)}");
+        // var DirectoryUrl = $"Images/GalleryImages";
+        int totalImages = 11;
+
+        for(int i=1; i < totalImages; i++) {
+            string imageUrl = $"images/GalleryImages/image{i}.jpeg";
+            ImageUrls.Add(imageUrl);
         }
+        // string[] GalleryImages = Directory.GetFiles($"{DirectoryUrl}", "*.jpeg");
+        // foreach (string image in GalleryImages) {
+        //    ImageUrls.Add($"{DirectoryUrl}/{Path.GetFileName(image)}");
+        // }
         StateHasChanged();
     }
 
