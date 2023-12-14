@@ -7,7 +7,7 @@
 -DCORE_BINDINGS
 -DGEN_PINVOKE=1
 -emit-llvm
-"-I/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/TempFolder/eadca3/eadca3/obj/Release/net7.0/wasm/for-publish"
+"-I/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/obj/Release/net7.0/wasm/for-publish"
 "-I/usr/local/share/dotnet/packs/Microsoft.NETCore.App.Runtime.Mono.browser-wasm/7.0.12/runtimes/browser-wasm/native/include/mono-2.0"
 "-I/usr/local/share/dotnet/packs/Microsoft.NETCore.App.Runtime.Mono.browser-wasm/7.0.12/runtimes/browser-wasm/native/include/wasm"
 -g

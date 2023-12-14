@@ -116,7 +116,8 @@ a, .btn-link {
     left: 20%;
     transform: translateX(-20%);
     max-width: 250px;
-    border-radius:10px;
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 .controls-container {

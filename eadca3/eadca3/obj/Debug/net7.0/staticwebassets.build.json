@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UcQk5Pzrbc+/Z1LD2JYqkvr03SyczPwP7QDdS9LySEM=",
+  "Hash": "hXf2hUjI8CnC+AYK62yfCaNOrocwk4eg9QAfi3PDVgc=",
   "Source": "eadca3",
   "BasePath": "/",
   "Mode": "Root",
@@ -7274,6 +7274,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/Images/GalleryImages/image10.jpeg"
+    },
+    {
+      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/wwwroot/Images/GalleryImages/image11.jpeg",
+      "SourceId": "eadca3",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "Images/GalleryImages/image11.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/GalleryImages/image11.jpeg"
+    },
+    {
+      "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/wwwroot/Images/GalleryImages/image12.jpeg",
+      "SourceId": "eadca3",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "Images/GalleryImages/image12.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/GalleryImages/image12.jpeg"
     },
     {
       "Identity": "/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/wwwroot/Images/GalleryImages/image2.jpeg",

@@ -3,26 +3,31 @@
 @using System.IO;
 @using System.Text.Json;
 
+
+<!-- Markup Section -->
 <div class="gallery container mt-4">
     <div class="row align-items-center">
         <div class="col-1">
+            <!-- Displays the previous images shown if any -->
             <button @onclick="Previous">
                 <img src="images/arrow-left.png" height="50px">
             </button>
         </div>
         <div class="slides col-10">
+            <!-- looping through the images in the array --->
             <div class="row">
-                @for (int i = @index; i < Math.Min(@index + 5, ImageUrls.Count); i++)
-                {
-                    <div class="col-2 m-2 gap-2">
+                @for (int i = @index; i < Math.Min(@index + @numberOfImagesToDisplay, imageUrls.Count); i++)
+                    {
+                    <div class="col-3 gap-2">
                         <div class="card">
-                            <img src=@ImageUrls[i] class="card-img-top" height="500px" width="200px">
+                            <img src=@imageUrls[i] class="card-img-top" height="500px" width="300px">
                         </div>
                     </div>
-                }
+                    }
             </div>
         </div>
         <div class="col-1">
+            <!-- Displays the next four images -->
             <button @onclick="Next">
                 <img src="images/arrow-right.png" height="50px">
             </button>
@@ -31,53 +36,96 @@
 </div>
 
 @code {
-    private List<string> ImageUrls = new List<string>();
-    private int index { get; set; } = 0;
 
+
+    // Variable decleration
+    private List<string> imageUrls = new List<string>();
+    private int index { get; set; } = 0;
+    private int numberOfImagesToDisplay { get; set; } = 4;
+
+
+    // Image URLs are obtained when the page is instantiated
     protected override async Task OnInitializedAsync()
     {
-        GetImageUrls();
-        index = 0;
+        try {
+            GetImageUrls();
+            index = 0;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
     }
 
-    // Why does this not change
-
+    // Obtains the image URLs
     public void GetImageUrls()
     {
-        // var DirectoryUrl = $"Images/GalleryImages";
-        int totalImages = 11;
 
-        for (int i = 1; i < totalImages; i++)
+        // Would have been implemented, but blazor does not allow access to the
+        // file system due to browser limitations.
+
+        // string directoryUrl = "images/GalleryImages";
+        // string[] imageFiles = Directory.GetFiles(directoryUrl);
+
+        {/* foreach(string imageFile in imageFiles)
+            {
+                directoryLength++;
+            } */
+        }
+
+        int directoryLength = 12;
+
+        for (int i = 1; i < (directoryLength + 1); i++)
         {
             string imageUrl = $"images/GalleryImages/image{i}.jpeg";
-            ImageUrls.Add(imageUrl);
+            imageUrls.Add(imageUrl);
         }
-        // string[] GalleryImages = Directory.GetFiles($"{DirectoryUrl}", "*.jpeg");
-        // foreach (string image in GalleryImages) {
-        //    ImageUrls.Add($"{DirectoryUrl}/{Path.GetFileName(image)}");
-        // }
         StateHasChanged();
     }
 
+    // Changes the image to previously viewed images
     private async Task Previous()
     {
-        if (index > 0 && index >= 5)
+        if (index > 0 && index >= numberOfImagesToDisplay)
         {
-            index -= 5;
-            await JSRuntime.InvokeVoidAsync("displayImages", JsonSerializer.Serialize(ImageUrls), index);
+            try
+            {
+                index -= numberOfImagesToDisplay;
+                await JSRuntime.InvokeVoidAsync("displayImages", JsonSerializer.Serialize(imageUrls), index);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
-        else if (index < 5)
+        else if (index < numberOfImagesToDisplay)
         {
-            index -= index;
-            await JSRuntime.InvokeVoidAsync("displayImages", JsonSerializer.Serialize(ImageUrls), index);
+            try
+            {
+                index -= index;
+                await JSRuntime.InvokeVoidAsync("displayImages", JsonSerializer.Serialize(imageUrls), index);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
+
+    // Changes the image to the next images in the array
     private async Task Next()
     {
-        if (index < ImageUrls.Count - 5)
+        if (index < imageUrls.Count - 5)
         {
-            index += 5;
-            await JSRuntime.InvokeVoidAsync("displayImages", JsonSerializer.Serialize(ImageUrls), index);
+            try
+            {
+                index += 5;
+                await JSRuntime.InvokeVoidAsync("displayImages", JsonSerializer.Serialize(imageUrls), index);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
-}
+    }

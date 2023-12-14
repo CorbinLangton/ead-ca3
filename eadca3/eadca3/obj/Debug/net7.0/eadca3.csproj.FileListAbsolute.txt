@@ -830,10 +830,13 @@
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/TempFolder/eadca3/eadca3/obj/Debug/net7.0/build-gz/Hb0nV99r.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/TempFolder/eadca3/eadca3/obj/Debug/net7.0/build-gz/GcYbYvi+.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/TempFolder/eadca3/eadca3/obj/Debug/net7.0/build-gz/aT0ZWNYf.gz
+/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/blazor.boot.json
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/blazor.webassembly.js
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/dotnet.7.0.12.z8f5q8vh64.js
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/dotnet.timezones.blat
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/dotnet.wasm
+/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/eadca3.dll
+/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/eadca3.pdb
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/icudt_CJK.dat
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/icudt_EFIGS.dat
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/icudt_no_CJK.dat
@@ -1185,6 +1188,7 @@
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/System.IO.FileSystem.dll.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/System.Linq.Queryable.dll.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/System.Linq.dll.gz
+/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/eadca3.pdb.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/System.Reflection.Emit.dll.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/System.Reflection.TypeExtensions.dll.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/System.Reflection.Extensions.dll.gz
@@ -1206,6 +1210,7 @@
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/System.ValueTuple.dll.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/System.Diagnostics.TraceSource.dll.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/dotnet.timezones.blat.gz
+/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/eadca3.dll.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/System.Reflection.Emit.Lightweight.dll.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/Microsoft.Extensions.FileSystemGlobbing.dll.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/System.Linq.Expressions.dll.gz
@@ -1230,11 +1235,6 @@
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/System.Security.Cryptography.Primitives.dll.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/Microsoft.Extensions.FileProviders.Abstractions.dll.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/System.IO.MemoryMappedFiles.dll.gz
-/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/blazor.boot.json
-/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/eadca3.dll
-/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/eadca3.pdb
-/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/eadca3.pdb.gz
-/Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/wwwroot/_framework/eadca3.dll.gz
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/eadca3.staticwebassets.runtime.json
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/eadca3.dll
 /Users/corbinlangton/Documents/Y4/AppDev/ead-ca3/eadca3/eadca3/bin/Debug/net7.0/eadca3.pdb

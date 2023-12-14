@@ -10,20 +10,25 @@
     <link href="css/app.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="eadca3.styles.css" rel="stylesheet" />
+
+    <!-- Function used with the Next and Previous function on the gallery page to display the next or previous images -->
     <script>window.displayImages = function (imageUrlsJson, index) {
-                const ImageUrls = JSON.parse(imageUrlsJson);
+                const imageUrls = JSON.parse(imageUrlsJson);
                 const slides = document.querySelector('.slides');
                 slides.innerHTML = '';
+                // Create Div to replace the current div in the .slides container
                 const enclosingDiv = document.createElement('div');
                 enclosingDiv.classList.add('col-12')
-                for (let i = index; i < (index + 5); i++) {
-                    if (i < ImageUrls.length) {
+                // Loops through the amount of images defined to display and adds them to the new div
+                for (let i = index; i < (index + @numberOfImagesToDisplay); i++) {
+                    if (i < imageUrls.length) {
                         const img = document.createElement('img');
-                        img.classList.add('m-2', 'gap-2', 'h-100', 'w-200')
-                        img.src = ImageUrls[i];
+                        img.classList.add('gap-2', 'h-100', 'w-200')
+                        img.src = imageUrls[i];
                         enclosingDiv.appendChild(img)
                     }
                 }
+                // Adds the new div to the .slides div
                 slides.appendChild(enclosingDiv)
             }
     </script>

@@ -6,8 +6,10 @@
         <p>@CurrentJoke</p>
     </div>
     <div class="controls-container">
+        <!-- Generates a new joke when the button is clicked -->
         <button type="button" @onclick='@GenerateJoke'>Generate</button>
 
+        <!-- User can select which category of joke they would like -->
         <label for="joke-category">Joke Category:</label>
         <select name="joke-category" id="joke-category" @ref="JokeCategoryRef" @onchange="getCategory">
             <option value="any">any</option>
@@ -29,6 +31,7 @@
             <option value="travel">Travel</option>
         </select>
 
+        <!-- Allows for user to view previous jokes generated and display them again -->
         <select name="joke-history" id="joke-history" @onchange="UpdateJoke">
             <option value="" disabled selected hidden>Joke History</option>
             @foreach (var joke in JokeHistory)
@@ -47,17 +50,21 @@
     @using Newtonsoft.Json.Linq
     @using Newtonsoft.Json
 
+    // Variable decleration
     private string? CurrentJoke { get; set; }
     private ElementReference JokeCategoryRef { get; set; }
     private string? JokeCategory { get; set; } = "any";
 
     private List<string> JokeHistory = new List<string>();
 
+
+    // Gets category from element
     private async Task getCategory(ChangeEventArgs e)
     {
         JokeCategory = e.Value.ToString();
     }
 
+    // Changes the Current joke to one selected from history and updates the display
     public async Task UpdateJoke(ChangeEventArgs e)
     {
         CurrentJoke = e.Value.ToString();
@@ -66,20 +73,26 @@
 
     public JokeJson JokeObject = new JokeJson();
 
+    // Generates a new joke via the API
     public async Task GenerateJoke()
     {
+        // Checks the category of the array as the URL for a specific category is different from just a general request
         if (JokeCategory == "any")
         {
             try
             {
+                // Creates a new HTTP client and sends a GET request
                 using HttpClient client = new HttpClient();
                 var res = await client.GetStringAsync("https://api.chucknorris.io/jokes/random");
+                // Creates an object based on the JSON returned
                 JokeObject = JsonConvert.DeserializeObject<JokeJson>(res);
                 CurrentJoke = JokeObject.value;
+                // Add the joke to the history array
                 if (!JokeHistory.Contains(CurrentJoke))
                 {
                     JokeHistory.Add(CurrentJoke);
                 }
+                // Update the UI
                 StateHasChanged();
             }
             catch (Exception e)
@@ -91,14 +104,18 @@
         {
             try
             {
+                // Creates a new HTTP client and sends a GET request
                 using HttpClient client = new HttpClient();
                 var res = await client.GetStringAsync($"https://api.chucknorris.io/jokes/random?category={JokeCategory}");
+                // Creates an object based on the JSON returned
                 JokeObject = JsonConvert.DeserializeObject<JokeJson>(res);
                 CurrentJoke = JokeObject.value;
+                // Add the joke to the history array
                 if (!JokeHistory.Contains(CurrentJoke))
                 {
                     JokeHistory.Add(CurrentJoke);
                 }
+                // Update the UI
                 StateHasChanged();
             }
             catch (Exception e)
@@ -108,6 +125,7 @@
         }
     }
 
+    // JSON object
     public class JokeJson
     {
         public List<string>? categories { get; set; }
